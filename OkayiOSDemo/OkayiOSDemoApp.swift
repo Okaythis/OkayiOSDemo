@@ -137,7 +137,7 @@ extension AppDelegate {
                             if(!isCancelled && status.rawValue == 1){
                                 print("Auth was successful")
                             }else{
-                                print("Auth was not declined")
+                                print("Auth was not successful")
                             }
                         }
                     }
