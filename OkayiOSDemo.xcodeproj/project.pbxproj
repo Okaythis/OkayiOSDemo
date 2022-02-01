@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8496E18F6FC07CCD6C06370B /* Pods_OkayiOSDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522D2359EE9F463B7444E0BE /* Pods_OkayiOSDemoTests.framework */; };
+		15CA5743AFDFC1FC07FEF2E5 /* Pods_OkayiOSDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0B750F39DB0E4992F8395B /* Pods_OkayiOSDemoTests.framework */; };
+		585B5008DE774074C8554A28 /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3372991FA23411B0F45584ED /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework */; };
+		A63103801FED2DC0E4713F7B /* Pods_OkayiOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3BB498BF9AE96AED4A5F47 /* Pods_OkayiOSDemo.framework */; };
 		C3C9D8A22799635D004A81EC /* OkayiOSDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9D8A12799635D004A81EC /* OkayiOSDemoApp.swift */; };
 		C3C9D8A42799635D004A81EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9D8A32799635D004A81EC /* ContentView.swift */; };
 		C3C9D8A62799635F004A81EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3C9D8A52799635F004A81EC /* Assets.xcassets */; };
@@ -20,8 +22,6 @@
 		C3FCF1F7279E991B00D569F4 /* OkayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCF1F6279E991B00D569F4 /* OkayConfig.swift */; };
 		C3FCF1F9279E99CC00D569F4 /* OkayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCF1F8279E99CC00D569F4 /* OkayWrapper.swift */; };
 		C3FCF1FD279E9C5B00D569F4 /* ConfigurableResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FCF1FC279E9C5B00D569F4 /* ConfigurableResourceProvider.swift */; };
-		D0EE32FC3AB810DAD1493A54 /* Pods_OkayiOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF80CD0328308E99D92043F9 /* Pods_OkayiOSDemo.framework */; };
-		E37CB3B77C4CF91EC9B26F15 /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C5A6B35E76D45210894B4F /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,14 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BA329DB1A335ADEC4CAC1BC /* Pods-OkayiOSDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemoTests.release.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemoTests/Pods-OkayiOSDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		4A4CBA07AB9D123B30601C4B /* Pods-OkayiOSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo.release.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo.release.xcconfig"; sourceTree = "<group>"; };
-		522D2359EE9F463B7444E0BE /* Pods_OkayiOSDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkayiOSDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A8761D4936B8CF9BB69BED3 /* Pods-OkayiOSDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemoTests/Pods-OkayiOSDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		683294E0B08ABFF48D2B71B7 /* Pods-OkayiOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo.debug.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		7F061476BDC456C162E1B8AA /* Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A5C5A6B35E76D45210894B4F /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkayiOSDemo_OkayiOSDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADFF27CC1E38C5A4932F02CD /* Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2D9409025006DD9E07132D5B /* Pods-OkayiOSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo.release.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3372991FA23411B0F45584ED /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkayiOSDemo_OkayiOSDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D0B750F39DB0E4992F8395B /* Pods_OkayiOSDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkayiOSDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C71AF36E1BD4EEE98034804 /* Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A14AC2A85B92B0252D1A8C23 /* Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AE3BB498BF9AE96AED4A5F47 /* Pods_OkayiOSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkayiOSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9D89E2799635D004A81EC /* OkayiOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OkayiOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C9D8A12799635D004A81EC /* OkayiOSDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkayiOSDemoApp.swift; sourceTree = "<group>"; };
 		C3C9D8A32799635D004A81EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,7 +65,9 @@
 		C3FCF1F6279E991B00D569F4 /* OkayConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkayConfig.swift; sourceTree = "<group>"; };
 		C3FCF1F8279E99CC00D569F4 /* OkayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkayWrapper.swift; sourceTree = "<group>"; };
 		C3FCF1FC279E9C5B00D569F4 /* ConfigurableResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableResourceProvider.swift; sourceTree = "<group>"; };
-		EF80CD0328308E99D92043F9 /* Pods_OkayiOSDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkayiOSDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D4F79D0E2EBFD4B593302E /* Pods-OkayiOSDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemoTests.release.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemoTests/Pods-OkayiOSDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		EB3B28AF0C5A514633A3F602 /* Pods-OkayiOSDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemoTests/Pods-OkayiOSDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFC346E27B2B48BE0A090BED /* Pods-OkayiOSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo.debug.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EE32FC3AB810DAD1493A54 /* Pods_OkayiOSDemo.framework in Frameworks */,
+				A63103801FED2DC0E4713F7B /* Pods_OkayiOSDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8496E18F6FC07CCD6C06370B /* Pods_OkayiOSDemoTests.framework in Frameworks */,
+				15CA5743AFDFC1FC07FEF2E5 /* Pods_OkayiOSDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,19 +91,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E37CB3B77C4CF91EC9B26F15 /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework in Frameworks */,
+				585B5008DE774074C8554A28 /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3AD977EB3167DE0327716B34 /* Frameworks */ = {
+		1B4C102113904F5EF95E4F70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF80CD0328308E99D92043F9 /* Pods_OkayiOSDemo.framework */,
-				A5C5A6B35E76D45210894B4F /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework */,
-				522D2359EE9F463B7444E0BE /* Pods_OkayiOSDemoTests.framework */,
+				AE3BB498BF9AE96AED4A5F47 /* Pods_OkayiOSDemo.framework */,
+				3372991FA23411B0F45584ED /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework */,
+				6D0B750F39DB0E4992F8395B /* Pods_OkayiOSDemoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,12 +111,12 @@
 		78E2AE80DB2D6426B6F6EF68 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				683294E0B08ABFF48D2B71B7 /* Pods-OkayiOSDemo.debug.xcconfig */,
-				4A4CBA07AB9D123B30601C4B /* Pods-OkayiOSDemo.release.xcconfig */,
-				7F061476BDC456C162E1B8AA /* Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig */,
-				ADFF27CC1E38C5A4932F02CD /* Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig */,
-				5A8761D4936B8CF9BB69BED3 /* Pods-OkayiOSDemoTests.debug.xcconfig */,
-				0BA329DB1A335ADEC4CAC1BC /* Pods-OkayiOSDemoTests.release.xcconfig */,
+				EFC346E27B2B48BE0A090BED /* Pods-OkayiOSDemo.debug.xcconfig */,
+				2D9409025006DD9E07132D5B /* Pods-OkayiOSDemo.release.xcconfig */,
+				9C71AF36E1BD4EEE98034804 /* Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig */,
+				A14AC2A85B92B0252D1A8C23 /* Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig */,
+				EB3B28AF0C5A514633A3F602 /* Pods-OkayiOSDemoTests.debug.xcconfig */,
+				C8D4F79D0E2EBFD4B593302E /* Pods-OkayiOSDemoTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -129,7 +129,7 @@
 				C3C9D8BB27996360004A81EC /* OkayiOSDemoUITests */,
 				C3C9D89F2799635D004A81EC /* Products */,
 				78E2AE80DB2D6426B6F6EF68 /* Pods */,
-				3AD977EB3167DE0327716B34 /* Frameworks */,
+				1B4C102113904F5EF95E4F70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,11 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3C9D8C227996360004A81EC /* Build configuration list for PBXNativeTarget "OkayiOSDemo" */;
 			buildPhases = (
-				A1DEA8A007A56B55CEFE450A /* [CP] Check Pods Manifest.lock */,
+				51AAB47BF14CA93CB679E890 /* [CP] Check Pods Manifest.lock */,
 				C3C9D89A2799635D004A81EC /* Sources */,
 				C3C9D89B2799635D004A81EC /* Frameworks */,
 				C3C9D89C2799635D004A81EC /* Resources */,
-				2D5266E024E7FCE13501E610 /* [CP] Embed Pods Frameworks */,
+				36F3FC7CA9F2597D89FD1F42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -244,7 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3C9D8C527996360004A81EC /* Build configuration list for PBXNativeTarget "OkayiOSDemoTests" */;
 			buildPhases = (
-				849ED0E36FC0C4AB3D2C0103 /* [CP] Check Pods Manifest.lock */,
+				036A74B3CBFCE0197233D706 /* [CP] Check Pods Manifest.lock */,
 				C3C9D8AA27996360004A81EC /* Sources */,
 				C3C9D8AB27996360004A81EC /* Frameworks */,
 				C3C9D8AC27996360004A81EC /* Resources */,
@@ -263,11 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3C9D8C827996360004A81EC /* Build configuration list for PBXNativeTarget "OkayiOSDemoUITests" */;
 			buildPhases = (
-				B720220C47BFEF36071163DB /* [CP] Check Pods Manifest.lock */,
+				9FF49A80848BD876D12733B5 /* [CP] Check Pods Manifest.lock */,
 				C3C9D8B427996360004A81EC /* Sources */,
 				C3C9D8B527996360004A81EC /* Frameworks */,
 				C3C9D8B627996360004A81EC /* Resources */,
-				41BBD0C24EF097D15713F7AD /* [CP] Embed Pods Frameworks */,
+				46BEA3CD83E978A3704E7E79 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,41 +350,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D5266E024E7FCE13501E610 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		41BBD0C24EF097D15713F7AD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		849ED0E36FC0C4AB3D2C0103 /* [CP] Check Pods Manifest.lock */ = {
+		036A74B3CBFCE0197233D706 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -406,7 +372,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A1DEA8A007A56B55CEFE450A /* [CP] Check Pods Manifest.lock */ = {
+		36F3FC7CA9F2597D89FD1F42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46BEA3CD83E978A3704E7E79 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51AAB47BF14CA93CB679E890 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,7 +428,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B720220C47BFEF36071163DB /* [CP] Check Pods Manifest.lock */ = {
+		9FF49A80848BD876D12733B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -617,7 +617,7 @@
 		};
 		C3C9D8C327996360004A81EC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 683294E0B08ABFF48D2B71B7 /* Pods-OkayiOSDemo.debug.xcconfig */;
+			baseConfigurationReference = EFC346E27B2B48BE0A090BED /* Pods-OkayiOSDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -626,6 +626,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OkayiOSDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 7RAAHH9298;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OkayiOSDemo/Info.plist;
@@ -649,7 +650,7 @@
 		};
 		C3C9D8C427996360004A81EC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A4CBA07AB9D123B30601C4B /* Pods-OkayiOSDemo.release.xcconfig */;
+			baseConfigurationReference = 2D9409025006DD9E07132D5B /* Pods-OkayiOSDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -658,6 +659,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OkayiOSDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 7RAAHH9298;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OkayiOSDemo/Info.plist;
@@ -681,7 +683,7 @@
 		};
 		C3C9D8C627996360004A81EC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A8761D4936B8CF9BB69BED3 /* Pods-OkayiOSDemoTests.debug.xcconfig */;
+			baseConfigurationReference = EB3B28AF0C5A514633A3F602 /* Pods-OkayiOSDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -702,7 +704,7 @@
 		};
 		C3C9D8C727996360004A81EC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0BA329DB1A335ADEC4CAC1BC /* Pods-OkayiOSDemoTests.release.xcconfig */;
+			baseConfigurationReference = C8D4F79D0E2EBFD4B593302E /* Pods-OkayiOSDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -723,7 +725,7 @@
 		};
 		C3C9D8C927996360004A81EC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F061476BDC456C162E1B8AA /* Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig */;
+			baseConfigurationReference = 9C71AF36E1BD4EEE98034804 /* Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -742,7 +744,7 @@
 		};
 		C3C9D8CA27996360004A81EC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADFF27CC1E38C5A4932F02CD /* Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig */;
+			baseConfigurationReference = A14AC2A85B92B0252D1A8C23 /* Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

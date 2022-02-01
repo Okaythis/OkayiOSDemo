@@ -9,6 +9,8 @@ import SwiftUI
 import Firebase
 import PSA
 import Foundation
+import FlutterCommunicationChannel
+import FccAbstractCore
 
 @main
 struct OkayiOSDemoApp: App {
@@ -38,6 +40,10 @@ func fetchFcmToken(fcmModel: FcmModel) {
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
     let gcmMessageIDKey = "gcm.message_id"
+    private func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0..<length).map{ _ in letters.randomElement()! })
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
@@ -65,6 +71,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         }
         
         application.registerForRemoteNotifications()
+        PSA.update(FccApiImpl.getInstance()  as FccAbstractCore.FccApi)
+        FccApiImpl.getInstance().prepare(flutterEngineDependency: FccAbstractCore.FlutterEngineDependency(flutterEngineId: "flutterEngine", secureChannelName: randomString(length: 32)))
         return true
     }
     
@@ -165,3 +173,4 @@ extension AppDelegate {
         )
     }
 }
+
