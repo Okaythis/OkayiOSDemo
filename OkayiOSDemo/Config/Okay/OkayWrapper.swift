@@ -12,8 +12,8 @@ public class OkayWrapper {
     private let okayConfig = OkayConfig()
     
     func enrollDevice(){
-        if PSA.isReadyForEnrollment() {
-            PSA.startEnrollment(withHost: okayConfig.okayServerUrl, invisibly: false, installationId: okayConfig.installationId, resourceProvider: ConfigurableResourceProvider(), pubPssBase64: okayConfig.pubPssBase64) { enrolmentStatus in
+        if PSAModule.isReadyForEnrollment() {
+            PSAModule.startEnrollment(withHost: okayConfig.okayServerUrl, invisibly: false, installationId: okayConfig.installationId, resourceProvider: ConfigurableResourceProvider(), pubPssBase64: okayConfig.pubPssBase64) { enrolmentStatus in
                 if(enrolmentStatus.rawValue == 1){
                     print("Enrolment was successful")
                 } else{
@@ -26,7 +26,7 @@ public class OkayWrapper {
     }
     
     func linkDeviceToTenant(linkingCode: String) {
-        PSA.linkTenant(withLinkingCode: linkingCode){ (linkingStatus, tenant) in
+        PSAModule.linkTenant(withLinkingCode: linkingCode){ (linkingStatus, tenant) in
             if(linkingStatus.rawValue == 1){
                 print("linking with \(String(describing: tenant.tenantId)) was successful")
             } else{
@@ -36,7 +36,7 @@ public class OkayWrapper {
     }
     
     func unlinkDeviceFromTenant(tenantID: String){
-        PSA.unlinkTenant(withTenantId: NSNumber(value: Int(tenantID) ?? 0)){ (unlinkingStatus, number) in
+        PSAModule.unlinkTenant(withTenantId: NSNumber(value: Int(tenantID) ?? 0)){ (unlinkingStatus, number) in
             if(unlinkingStatus.rawValue == 1){
                 print("Unlinking was successful")
             } else{

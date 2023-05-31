@@ -71,7 +71,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         }
         
         application.registerForRemoteNotifications()
-        PSA.update(FccApiImpl.getInstance()  as FccAbstractCore.FccApi)
+        PSAModule.update(FccApiImpl.getInstance()  as FccAbstractCore.FccApi)
         FccApiImpl.getInstance().prepare(flutterEngineDependency: FccAbstractCore.FlutterEngineDependency(flutterEngineId: "flutterEngine", secureChannelName: randomString(length: 32)))
         return true
     }
@@ -141,7 +141,7 @@ extension AppDelegate {
                 if let json = data.data(using: String.Encoding.utf8){
                     if let jsonData = try JSONSerialization.jsonObject(with: json, options: .allowFragments) as? [String:AnyObject]{
                         let sessionId = jsonData["sessionId"]
-                        PSA.startAuthorization(with: nil, sessionId: NSNumber(value: sessionId as! Int), resourceProvider: nil, loaderViewController: nil) { (isCancelled, status, _) in
+                        PSAModule.startAuthorization(with: nil, sessionId: NSNumber(value: sessionId as! Int), resourceProvider: nil, loaderViewController: nil) { (isCancelled, status, _) in
                             if(!isCancelled && status.rawValue == 1){
                                 print("Auth was successful")
                             }else{
@@ -163,7 +163,7 @@ extension AppDelegate {
 
 extension AppDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        PSA.updateDeviceToken(fcmToken ?? "")
+        PSAModule.updateDeviceToken(fcmToken ?? "")
         
         let dataDict: [String: String] = ["token": fcmToken ?? ""]
         NotificationCenter.default.post(
