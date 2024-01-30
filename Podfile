@@ -9,8 +9,8 @@ target 'OkayiOSDemo' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
-  pod 'PSASDK', '1.2.2'
-  pod 'FlutterCommunicationChannel', '1.2.8'
+  pod 'PSASDK', '1.2.18'
+  pod 'FlutterCommunicationChannel', '1.4.2'
   #pod 'FccAbstractCore', '1.0.9'
 
   target 'OkayiOSDemoTests' do
