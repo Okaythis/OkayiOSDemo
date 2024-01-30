@@ -9,6 +9,8 @@ import Foundation
 import PSA
 
 class ConfigurableResourceProvider: NSObject, ResourceProvider {
+    var invalidPinRetryErrorText: String = "Please try again later."
+    
     var biometricAlertReasonText: NSAttributedString! = NSAttributedString(string: "Biometric Alert!")
     
     var confirmButtonText: NSAttributedString! = NSAttributedString(string: "Confirm")
