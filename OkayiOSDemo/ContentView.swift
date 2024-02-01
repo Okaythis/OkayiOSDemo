@@ -15,7 +15,6 @@ struct ContentView: View {
     @State private var linkingCodeText: String = ""
     @State private var unlinkingCodeText: String = ""
     
-    @State private var selectedBaseURL: String = OkayDefaultConfig.okayStagingServerUrl
     @State private var openSettings: Bool = false
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
@@ -34,6 +33,8 @@ struct ContentView: View {
                 unlinkingSection
                 Spacer()
                 Spacer()
+                
+                NavigationLink(destination: UrlListView(), isActive: $openSettings) { EmptyView() }
             }
             .navigationTitle("Okay iOS Demo")
         }
@@ -43,7 +44,7 @@ struct ContentView: View {
         HStack {
             Spacer()
             Button {
-                okayWrapper.enrollDevice(using: selectedBaseURL)
+                okayWrapper.enrollDevice()
             } label: {
                 Text("Enroll Device")
                     .font(.subheadline)
@@ -52,6 +53,7 @@ struct ContentView: View {
                     .background(Color("Primary"))
                     .foregroundColor(colorScheme == .light ? .white : .black)
             }
+            .clipShape(.rect(cornerRadius: 5.0))
             Spacer()
             if !hideSettingsButton {
                 Button {
@@ -63,9 +65,8 @@ struct ContentView: View {
                         .padding()
                         .background(Color("Primary"))
                         .foregroundColor(colorScheme == .light ? .white : .black)
-                }.sheet(isPresented: $openSettings) {
-//                    UrlListView(selectedUrl: $selectedBaseURL)
                 }
+                .clipShape(.rect(cornerRadius: 5.0))
                 Spacer()
             }
         }
@@ -89,8 +90,7 @@ struct ContentView: View {
                     .background(Color("Primary"))
                     .foregroundColor(colorScheme == .light ? .white : .black)
             }
-            .contentShape(Rectangle())
-            .foregroundColor(.blue)
+            .clipShape(.rect(cornerRadius: 5.0))
         }
     }
     
@@ -111,8 +111,7 @@ struct ContentView: View {
                     .background(Color("Primary"))
                     .foregroundColor(colorScheme == .light ? .white : .black)
             }
-            .contentShape(Rectangle())
-            .foregroundColor(.blue)
+            .clipShape(.rect(cornerRadius: 5.0))
         }
     }
 }

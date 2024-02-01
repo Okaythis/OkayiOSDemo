@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		15CA5743AFDFC1FC07FEF2E5 /* Pods_OkayiOSDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0B750F39DB0E4992F8395B /* Pods_OkayiOSDemoTests.framework */; };
+		53248F322B690A6700A1051D /* AddNewUrlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53248F312B690A6700A1051D /* AddNewUrlView.swift */; };
+		539625142B68D61200F1A826 /* UrlListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539625132B68D61200F1A826 /* UrlListView.swift */; };
+		539625162B68E5BC00F1A826 /* URLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539625152B68E5BC00F1A826 /* URLHelpers.swift */; };
 		585B5008DE774074C8554A28 /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3372991FA23411B0F45584ED /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework */; };
 		A63103801FED2DC0E4713F7B /* Pods_OkayiOSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3BB498BF9AE96AED4A5F47 /* Pods_OkayiOSDemo.framework */; };
 		C3C9D8A22799635D004A81EC /* OkayiOSDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C9D8A12799635D004A81EC /* OkayiOSDemoApp.swift */; };
@@ -44,6 +47,9 @@
 /* Begin PBXFileReference section */
 		2D9409025006DD9E07132D5B /* Pods-OkayiOSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo.release.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo/Pods-OkayiOSDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3372991FA23411B0F45584ED /* Pods_OkayiOSDemo_OkayiOSDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkayiOSDemo_OkayiOSDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53248F312B690A6700A1051D /* AddNewUrlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewUrlView.swift; sourceTree = "<group>"; };
+		539625132B68D61200F1A826 /* UrlListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlListView.swift; sourceTree = "<group>"; };
+		539625152B68E5BC00F1A826 /* URLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelpers.swift; sourceTree = "<group>"; };
 		6D0B750F39DB0E4992F8395B /* Pods_OkayiOSDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OkayiOSDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C71AF36E1BD4EEE98034804 /* Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A14AC2A85B92B0252D1A8C23 /* Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-OkayiOSDemo-OkayiOSDemoUITests/Pods-OkayiOSDemo-OkayiOSDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,8 +159,11 @@
 				C3FCF1EE279AA4A700D569F4 /* GoogleService-Info.plist */,
 				C3C9D8A12799635D004A81EC /* OkayiOSDemoApp.swift */,
 				C3C9D8A32799635D004A81EC /* ContentView.swift */,
+				539625132B68D61200F1A826 /* UrlListView.swift */,
+				53248F312B690A6700A1051D /* AddNewUrlView.swift */,
 				C3C9D8A52799635F004A81EC /* Assets.xcassets */,
 				C3C9D8A72799635F004A81EC /* Preview Content */,
+				539625152B68E5BC00F1A826 /* URLHelpers.swift */,
 			);
 			path = OkayiOSDemo;
 			sourceTree = "<group>";
@@ -458,11 +467,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3FCF1F4279E91B300D569F4 /* FcmModel.swift in Sources */,
+				539625162B68E5BC00F1A826 /* URLHelpers.swift in Sources */,
 				C3FCF1F9279E99CC00D569F4 /* OkayWrapper.swift in Sources */,
 				C3FCF1F7279E991B00D569F4 /* OkayConfig.swift in Sources */,
 				C3C9D8A42799635D004A81EC /* ContentView.swift in Sources */,
 				C3C9D8A22799635D004A81EC /* OkayiOSDemoApp.swift in Sources */,
+				539625142B68D61200F1A826 /* UrlListView.swift in Sources */,
 				C3FCF1FD279E9C5B00D569F4 /* ConfigurableResourceProvider.swift in Sources */,
+				53248F322B690A6700A1051D /* AddNewUrlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

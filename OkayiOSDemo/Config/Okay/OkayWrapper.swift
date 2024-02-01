@@ -10,9 +10,9 @@ import PSA
 
 public class OkayWrapper {
     
-    func enrollDevice(using url: String){
+    func enrollDevice(){
         if PSAModule.isReadyForEnrollment() {
-            PSAModule.startEnrollment(withHost: url, invisibly: false, installationId: OkayDefaultConfig.installationId, resourceProvider: ConfigurableResourceProvider(), pubPssBase64: OkayDefaultConfig.pubPssBase64) { enrolmentStatus in
+            PSAModule.startEnrollment(withHost: BaseURLManager.shared.activeURL, invisibly: false, installationId: OkayDefaultConfig.installationId, resourceProvider: ConfigurableResourceProvider(), pubPssBase64: OkayDefaultConfig.pubPssBase64) { enrolmentStatus in
                 if(enrolmentStatus.rawValue == 1){
                     print("Enrolment was successful")
                 } else{
