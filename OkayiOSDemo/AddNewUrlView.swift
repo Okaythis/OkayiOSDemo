@@ -42,6 +42,7 @@ struct AddNewUrlView: View {
                 .textContentType(.name)
                 .padding(15)
                 .border(colorScheme == .dark ? .white : .gray, width: 2)
+                .autocorrectionDisabled()
         }
         .listRowBackground(Color.clear)
     }
@@ -53,6 +54,8 @@ struct AddNewUrlView: View {
                 .padding(15)
                 .border(colorScheme == .dark ? .white : .gray, width: 2)
                 .keyboardType(.URL)
+                .autocorrectionDisabled()
+                .textInputAutocapitalization(.never)
         }
         .listRowBackground(Color.clear)
     }
@@ -94,6 +97,8 @@ struct AddNewUrlView: View {
     }
     
     private func checkAndAddURL() {
+        guard !urlName.isEmpty || !urlValue.isEmpty else { return }
+        
         guard BaseURLManager.shared.isValidUrl(urlValue) else {
             showInvalidAlert = true
             urlValue = ""

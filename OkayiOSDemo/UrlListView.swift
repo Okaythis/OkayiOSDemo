@@ -10,42 +10,63 @@ import SwiftUI
 struct UrlListView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var urlManager = BaseURLManager.shared
+    
     @State private var openAddUrlScreen = false
+    @State private var showUrlDeleteAlert = false
+    
+    @State private var processingUrl: UrlData?
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             urlList
             addButton
         }
+        .alert("Are you sure you want to delete this URL?", isPresented: $showUrlDeleteAlert) {
+            Button("Cancel", role: .cancel){}
+            Button("Delete", role: .destructive, action: deleteURL)
+        }
     }
     
     var urlList: some View {
         List(urlManager.allURLs) { data in
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(data.name)
-                        .font(.title)
-                        .fontWeight(.semibold)
-                        .foregroundColor(Color.gray)
+            Button {
+                urlManager.activeURL = data.url
+                dismiss()
+            } label: {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(data.name)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.gray)
+                        
+                        Text(data.url)
+                            .font(.title3)
+                            .foregroundColor(Color.blue)
+                    }
                     
-                    Text(data.url)
-                        .font(.title3)
-                        .foregroundColor(Color.blue)
-                }
-                
-                Spacer()
-                if data.url == urlManager.activeURL {
-                    VStack {
-                        Spacer()
-                        Image(systemName: "checkmark.circle")
-                            .foregroundStyle(.blue)
-                        Spacer()
+                    Spacer()
+                    if data.url == urlManager.activeURL {
+                        VStack {
+                            Spacer()
+                            Image(systemName: "checkmark.circle")
+                                .foregroundStyle(.blue)
+                            Spacer()
+                        }
                     }
                 }
             }
-            .onTapGesture {
-                urlManager.activeURL = data.url
-                dismiss()
+            .swipeActions {
+                if data.url != OkayDefaultConfig.okayStagingServerUrl {
+                    Button(role: .destructive) {
+                        processingUrl = data
+                        showUrlDeleteAlert = true
+                    }label: {
+                        Text("Delete")
+                        Image(systemName: "bin.xmark")
+                            .foregroundStyle(.white)
+                    }
+                }
             }
         }
     }
@@ -65,6 +86,13 @@ struct UrlListView: View {
         .padding()
         .fullScreenCover(isPresented: $openAddUrlScreen) {
             AddNewUrlView()
+        }
+    }
+    
+    private func deleteURL() {
+        guard let urlData = self.processingUrl else { return }
+        BaseURLManager.shared.deleteURLData(urlData) {
+            self.processingUrl = nil
         }
     }
 }

@@ -62,6 +62,15 @@ class BaseURLManager: ObservableObject {
         finished()
     }
     
+    func deleteURLData(_ urlData: UrlData, _ finished: ()->Void) {
+        if let firstIndex = self.allURLs.firstIndex(where: { $0.id == urlData.id }) {
+            self.allURLs.remove(at: firstIndex)
+            self.storeUrlData(allURLs)
+            self.readUrlData()
+        }
+        finished()
+    }
+    
     func isDuplicateData(_ url: String) -> Bool {
         let filtered = self.allURLs.first { $0.url == url }
         return filtered == nil ? false : true
@@ -78,7 +87,7 @@ class BaseURLManager: ObservableObject {
 class LocalStorageManager {
     private init() { }
     
-    private static func fileURL(for file: String) -> URL? {
+    static func fileURL(for file: String) -> URL? {
         guard let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(file) else {
             return nil
         }
