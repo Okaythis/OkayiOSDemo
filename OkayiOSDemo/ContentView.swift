@@ -18,8 +18,15 @@ struct ContentView: View {
     @State private var openSettings: Bool = false
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
-    var hideSettingsButton: Bool = false // debug pruposes..
+    @State private var showEnrollmentSuccess: Bool = false
+    @State private var showEnrollmentFailure: Bool = false
+    @State private var showLinkingSuccess: Bool = false
+    @State private var showLinkingFailure: Bool = false
+    @State private var showUnlinkingSuccess: Bool = false
+    @State private var showUnlinkingFailure: Bool = false
     
+    @State private var responseCode: Int = -1
+        
     let okayWrapper = OkayWrapper()
     
     var body: some View {
@@ -36,6 +43,12 @@ struct ContentView: View {
                 
                 NavigationLink(destination: UrlListView(), isActive: $openSettings) { EmptyView() }
             }
+            .alert("Enrollment was successful.", isPresented: $showEnrollmentSuccess) {}
+            .alert("Enrollment was not successful (code: \(responseCode))", isPresented: $showEnrollmentFailure) {}
+            .alert("Linking was successful.", isPresented: $showLinkingSuccess) {}
+            .alert("Linking was not successful (code: \(responseCode))", isPresented: $showLinkingFailure) {}
+            .alert("Unlinking was successful.", isPresented: $showUnlinkingSuccess) {}
+            .alert("Unlinking was not successful (code: \(responseCode))", isPresented: $showUnlinkingFailure) {}
             .navigationTitle("Okay iOS Demo")
         }
     }
@@ -44,7 +57,17 @@ struct ContentView: View {
         HStack {
             Spacer()
             Button {
-                okayWrapper.enrollDevice()
+                okayWrapper.enrollDevice { status in
+                    switch status {
+                    case .success:
+                        responseCode = -1
+                        showEnrollmentSuccess =  true
+                    case .failure(let code):
+                        print(code)
+                        responseCode = code
+                        showEnrollmentFailure = true
+                    }
+                }
             } label: {
                 Text("Enroll Device")
                     .font(.subheadline)
@@ -55,7 +78,7 @@ struct ContentView: View {
             }
             .clipShape(.rect(cornerRadius: 5.0))
             Spacer()
-            if !hideSettingsButton {
+        
                 Button {
                     openSettings = true
                 } label: {
@@ -68,7 +91,7 @@ struct ContentView: View {
                 }
                 .clipShape(.rect(cornerRadius: 5.0))
                 Spacer()
-            }
+            
         }
     }
     
@@ -81,7 +104,18 @@ struct ContentView: View {
                 .padding()
             
             Button {
-                okayWrapper.linkDeviceToTenant(linkingCode: linkingCodeText)
+                if linkingCodeText.isEmpty { return }
+                okayWrapper.linkDeviceToTenant(linkingCode: linkingCodeText) { status in
+                    switch status {
+                    case .success:
+                        responseCode = -1
+                        showLinkingSuccess =  true
+                    case .failure(let code):
+                        print(code)
+                        responseCode = code
+                        showLinkingFailure = true
+                    }
+                }
             } label: {
                 Text("Link Device")
                     .font(.subheadline)
@@ -102,7 +136,18 @@ struct ContentView: View {
                 .padding()
             
             Button {
-                okayWrapper.unlinkDeviceFromTenant(tenantID: unlinkingCodeText)
+                if unlinkingCodeText.isEmpty { return }
+                okayWrapper.unlinkDeviceFromTenant(tenantID: unlinkingCodeText) { status in
+                    switch status {
+                    case .success:
+                        responseCode = -1
+                        showUnlinkingSuccess =  true
+                    case .failure(let code):
+                        print(code)
+                        responseCode = code
+                        showUnlinkingFailure = true
+                    }
+                }
             } label: {
                 Text("Unlink Device")
                     .font(.subheadline)

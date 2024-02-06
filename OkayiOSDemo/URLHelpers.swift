@@ -29,6 +29,10 @@ class BaseURLManager: ObservableObject {
     }
     
     private func loadInitialData() {
+        let filePath = LocalStorageManager.fileURL(for: Self.fileName)
+        
+        guard !FileManager.default.fileExists(atPath: filePath.absoluteString) else { print("File exists.."); return }
+        
         let defaultURL = UrlData(name: "Stage", url: OkayDefaultConfig.okayStagingServerUrl)
         self.storeUrlData([defaultURL])
     }
@@ -87,15 +91,12 @@ class BaseURLManager: ObservableObject {
 class LocalStorageManager {
     private init() { }
     
-    static func fileURL(for file: String) -> URL? {
-        guard let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(file) else {
-            return nil
-        }
-        return url
+    static func fileURL(for file: String) -> URL {
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!.appendingPathComponent(file)
     }
     
     static func store(data: Data, to file: String = BaseURLManager.fileName) {
-        guard let fileURL = self.fileURL(for: file) else { print("Can't create file locally.."); return }
+        let fileURL = self.fileURL(for: file)
         
         do {
             try data.write(to: fileURL)
@@ -105,7 +106,7 @@ class LocalStorageManager {
     }
     
     static func retrive(from file: String = BaseURLManager.fileName) -> Data? {
-        guard let fileURL = self.fileURL(for: file) else { print("Can't find file locally.."); return nil }
+        let fileURL = self.fileURL(for: file)
         
         var data: Data?
         do {
