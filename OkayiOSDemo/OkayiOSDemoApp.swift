@@ -90,6 +90,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         
         // Print full message.
         print(userInfo)
+        printJson(userInfo)
     }
     
     func application(_ application: UIApplication,
@@ -106,7 +107,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         }
         // Print full message.
         print(userInfo)
-        
+        printJson(userInfo)
         completionHandler(UIBackgroundFetchResult.newData)
     }
     
@@ -124,6 +125,12 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         
         // With swizzling disabled you must set the APNs token here.
         Messaging.messaging().apnsToken = deviceToken
+    }
+    
+    func printJson(_ dict: [AnyHashable: Any]) {
+        if let theJSONData = try? JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted]), let theJSONText = String(data: theJSONData, encoding: .utf8) {
+            print("JSON string:\n\(theJSONText)")
+        }
     }
 }
 

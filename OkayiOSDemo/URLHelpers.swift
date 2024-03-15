@@ -34,7 +34,8 @@ class BaseURLManager: ObservableObject {
         guard !FileManager.default.fileExists(atPath: filePath.absoluteString) else { print("File exists.."); return }
         
         let defaultURL = UrlData(name: "Stage", url: OkayDefaultConfig.okayStagingServerUrl)
-        self.storeUrlData([defaultURL])
+        let defaultURLdev = UrlData(name: "Dev", url: "https://dev.okaythis.com")
+        self.storeUrlData([defaultURL, defaultURLdev])
     }
     
     private func storeUrlData(_ urls: [UrlData]) {
